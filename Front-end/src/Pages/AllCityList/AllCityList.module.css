@@ -1,0 +1,95 @@
+
+.all-city-list-container {
+    min-height: 100vh;
+    color: #fff; /* White text for contrast */
+  }
+  .all-city-list-header{
+    position: relative;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .all-city-list-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.7);
+    object-fit: cover;
+    z-index: -1;
+  }
+  .all-city-title {
+    text-align: center;
+    font-size: 4rem;
+    font-family: var(--ta-serif);
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: 80px;
+  }
+  
+  /* Button Text */
+  .explore-button-text {
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; /* Fully rounded */
+    background-color: #1e1e1e;
+    color: #fff; /* Tailwind text-white */
+    padding: 0 12px; /* Tailwind px-3 */
+    font-size: 0.875rem; /* Tailwind text-sm */
+    font-weight: 500; /* Tailwind font-medium */
+    backdrop-filter: blur(12px); /* Tailwind backdrop-blur-3xl */
+    z-index: 2; /* Above the spinning gradient */
+  }
+  .explore-button-text:hover{
+    color: rgb(36, 153, 149);
+  }
+  
+  .sortMenu {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #000000;
+    padding: 20px;
+  }
+  
+  .sortMenu select{
+    padding: 10px 14px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(252, 182, 159, 0.4);
+    transition: all 0.3s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  
+  .sortMenu select:hover {
+    box-shadow: 0 6px 14px rgba(252, 182, 159, 0.6);
+    transform: scale(1.03);
+  }
+  .sortMenu select option {
+    background-color: #fff7f0;
+    color: #333;
+    font-weight: 500;
+    padding: 10px;
+  }
+  
+  /* Optional: Hover effect for dropdown options (note: limited support) */
+  .sortMenu select option:hover {
+    background-color: #ffe0cc;
+  }
+  
+  .sortMenu select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(252, 182, 159, 0.5);
+  }
+  

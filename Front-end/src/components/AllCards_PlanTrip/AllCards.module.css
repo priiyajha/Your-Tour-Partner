@@ -1,0 +1,108 @@
+.where-to-content{
+    background-color: #000;
+    height: 100%;
+    padding: 60px 60px;
+  }
+ .place-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(30%, 1fr));
+    gap: 20px;
+  }
+  
+  /* Place Card Styling */
+ .place-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 500px;
+  }
+  
+  .place-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(70, 69, 69, 0.8);
+  }
+  
+  /* Image Styling */
+   .place-card-image {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  
+  .place-card-name {
+    margin: auto;
+    color: #fff;
+    font-family: var(--ta-serif);
+    font-size: 1.5rem;
+  }
+  
+   .place-card-name span {
+    background-color: #27a005;
+    padding:2px 10px;
+    margin-right: 5px;
+    margin-left: -5px;
+    border-radius: 5px 15px;
+    font-size: 1.2rem;
+  }
+  
+   .place-card-description {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 10px;
+    text-align: justify;
+    font-family: var(--ta-serif);
+    overflow: hidden;
+    display: -webkit-box;
+    line-clamp: 6;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+  }
+  
+  /* Card Footer */
+   .place-card-footer {
+    margin-top: 20px;
+    background-color: #1e1e1e;
+    width: 100%;
+    text-align: center;
+  }
+  /* Parent Button Styling */
+.explore-button {
+  position: relative;
+  display: inline-flex;
+  height: 48px; /* Height is 12 Tailwind units */
+  overflow: hidden;
+  border-radius: 10px; /* Fully rounded (Tailwind rounded-full) */
+  width: 300px;
+  padding: 1px; /* Border thickness simulation */
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+/* Spinning Background Gradient */
+.explore-button-bg {
+  position: absolute;
+  inset: -1000%;
+  background: conic-gradient(from 90deg at 50% 50%, #0e2735 0%, #393BB2 50%, #213a8b 100%);
+  animation: spin 5s linear infinite; /* Spinning effect */
+  z-index: 1; /* Ensures it stays behind the text */
+}
+
+/* Spinning Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
